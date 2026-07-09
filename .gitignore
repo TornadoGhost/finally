@@ -205,3 +205,12 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# SQLite database files (runtime data)
+db/
+*.db
+*.sqlite
+*.sqlite3
+
+# Next.js build output (rebuilt at container build time)
+frontend/out/

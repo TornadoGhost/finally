@@ -20,26 +20,42 @@ Single Docker container on port 8000:
 - **Frontend**: Next.js (static export), TypeScript, Tailwind CSS
 - **Backend**: FastAPI (Python/uv), SSE streaming
 - **Database**: SQLite with lazy initialization
-- **AI**: LiteLLM → OpenRouter (Cerebras inference), structured outputs
+- **AI**: LiteLLM — OpenRouter (if API key set) or local Ollama (GPU-free)
 - **Market data**: Built-in GBM simulator (default) or Massive API (optional)
 
 ## Quick Start
 
 ```bash
 cp .env.example .env
-# Add your OPENROUTER_API_KEY to .env
+./scripts/start_mac.sh
+```
 
-docker build -t finally .
-docker run -v finally-data:/app/db -p 8000:8000 --env-file .env finally
-# Open http://localhost:8000
+First run pulls the Ollama model (qwen2.5:0.5b, ~400MB) automatically. Open http://localhost:8000
+
+Stop: `./scripts/stop_mac.sh`
+
+## AI Models
+
+LLM provider priority: **OpenRouter → Ollama → mock mode**
+
+| Provider | Setup | Model |
+|---|---|---|
+| OpenRouter | Set `OPENROUTER_API_KEY` in `.env` | GPT-OSS-120B via Cerebras |
+| Ollama (Docker) | Built into docker-compose | Haiku (default) |
+
+To use a different Ollama model, add to `.env` and run again:
+```bash
+echo "OLLAMA_MODEL=llama3.2" >> .env
+./scripts/start_mac.sh
 ```
 
 ## Environment Variables
 
 | Variable | Required | Description |
 |---|---|---|
-| `OPENROUTER_API_KEY` | Yes | OpenRouter API key for AI chat |
-| `MASSIVE_API_KEY` | No | Real market data via Massive (Polygon.io); omit to use simulator |
+| `OPENROUTER_API_KEY` | No | OpenRouter API key; omit to use Ollama |
+| `OLLAMA_MODEL` | No | Ollama model name (default: `haiku`) |
+| `MASSIVE_API_KEY` | No | Real market data via Massive (Polygon.io) |
 | `LLM_MOCK` | No | `true` for deterministic mock responses (testing/CI) |
 
 ## Project Structure
