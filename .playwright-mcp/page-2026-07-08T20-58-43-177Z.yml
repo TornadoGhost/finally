@@ -1,0 +1,39 @@
+- generic [ref=f1e2]:
+  - banner [ref=f1e3]:
+    - generic [ref=f1e4]: FinAllyAI Trading Workstation
+    - generic [ref=f1e5]:
+      - generic [ref=f1e6]:
+        - generic [ref=f1e7]: Portfolio Value
+        - generic [ref=f1e8]: $0.00
+      - generic [ref=f1e9]:
+        - generic [ref=f1e10]: Cash Available
+        - generic [ref=f1e11]: $0.00
+      - generic [ref=f1e12]:
+        - generic "Disconnected"
+        - text: Reconnecting
+  - generic [ref=f1e13]:
+    - generic [ref=f1e17]:
+      - text: Watchlist
+      - generic [ref=f1e18]:
+        - textbox "TICKER" [ref=f1e19]
+        - button "+" [ref=f1e20]
+    - generic [ref=f1e21]:
+      - generic [ref=f1e23]: Select a ticker to view chart
+      - generic [ref=f1e25]: No positions yet. Buy some shares to see your portfolio heatmap.
+      - generic [ref=f1e26]:
+        - text: Trade
+        - textbox "TICKER" [ref=f1e27]
+        - spinbutton "Qty" [ref=f1e28]
+        - button "Buy" [ref=f1e29]
+        - button "Sell" [ref=f1e30]
+        - generic [ref=f1e31]:
+          - text: "Cash:"
+          - generic [ref=f1e32]: $0.00
+      - generic [ref=f1e33]: No portfolio history yet.
+      - generic [ref=f1e34]: No open positions.
+    - generic [ref=f1e36]:
+      - button "AI Chat<" [ref=f1e37]
+      - paragraph [ref=f1e40]: Hello! I'm FinAlly, your AI trading assistant. Ask me to analyze your portfolio, suggest trades, or manage your watchlist.
+      - generic [ref=f1e41]:
+        - textbox "Ask FinAlly..." [ref=f1e42]
+        - button "Send" [ref=f1e43]

@@ -1,0 +1,33 @@
+version: '3.9'
+services:
+  finally:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - LLM_MOCK=true
+      - OPENROUTER_API_KEY=mock-key
+    volumes:
+      - finally-test-data:/app/db
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/health"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  playwright:
+    image: mcr.microsoft.com/playwright/python:v1.49.0-jammy
+    depends_on:
+      finally:
+        condition: service_healthy
+    working_dir: /app
+    volumes:
+      - .:/app
+    command: bash -c "pip install playwright && playwright install chromium && pytest -v"
+    environment:
+      - BASE_URL=http://finally:8000
+
+volumes:
+  finally-test-data:

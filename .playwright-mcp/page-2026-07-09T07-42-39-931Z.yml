@@ -1,0 +1,165 @@
+- generic [active] [ref=f12e1]:
+  - generic [ref=f12e2]:
+    - banner [ref=f12e3]:
+      - generic [ref=f12e4]:
+        - generic [ref=f12e5]: FinAlly
+        - generic [ref=f12e6]: AI Trading Workstation
+      - generic [ref=f12e7]:
+        - generic [ref=f12e8]:
+          - generic [ref=f12e9]: Portfolio Value
+          - generic [ref=f12e10]: $10,038.69
+        - generic [ref=f12e11]:
+          - generic [ref=f12e12]: Cash Available
+          - generic [ref=f12e13]: $6,585.35
+        - generic [ref=f12e14]:
+          - generic "Connected" [ref=f12e15]
+          - generic [ref=f12e16]: Live
+    - generic [ref=f12e17]:
+      - generic [ref=f12e20]:
+        - generic [ref=f12e21]:
+          - generic [ref=f12e22]: Watchlist
+          - generic [ref=f12e23]:
+            - textbox "TICKER" [ref=f12e24]
+            - button "+" [ref=f12e25]
+        - generic [ref=f12e26]:
+          - generic [ref=f12e27] [cursor=pointer]:
+            - generic [ref=f12e28]:
+              - generic [ref=f12e29]: AAPL
+              - generic [ref=f12e30]: $197.39
+            - generic [ref=f12e32]:
+              - generic [ref=f12e33]: "-0.01"
+              - generic [ref=f12e34]: (-0.01%)
+          - generic [ref=f12e36] [cursor=pointer]:
+            - generic [ref=f12e37]:
+              - generic [ref=f12e38]: AMZN
+              - generic [ref=f12e39]: $184.93
+            - generic [ref=f12e41]:
+              - generic [ref=f12e42]: "+0.00"
+              - generic [ref=f12e43]: (+0.00%)
+          - generic [ref=f12e45] [cursor=pointer]:
+            - generic [ref=f12e46]:
+              - generic [ref=f12e47]: GOOGL
+              - generic [ref=f12e48]: $166.86
+            - generic [ref=f12e50]:
+              - generic [ref=f12e51]: "+0.00"
+              - generic [ref=f12e52]: (+0.00%)
+          - generic [ref=f12e54] [cursor=pointer]:
+            - generic [ref=f12e55]:
+              - generic [ref=f12e56]: JPM
+              - generic [ref=f12e57]: $195.30
+            - generic [ref=f12e59]:
+              - generic [ref=f12e60]: "+0.00"
+              - generic [ref=f12e61]: (+0.00%)
+          - generic [ref=f12e63] [cursor=pointer]:
+            - generic [ref=f12e64]:
+              - generic [ref=f12e65]: META
+              - generic [ref=f12e66]: $512.97
+            - generic [ref=f12e68]:
+              - generic [ref=f12e69]: "-0.03"
+              - generic [ref=f12e70]: (-0.01%)
+          - generic [ref=f12e72] [cursor=pointer]:
+            - generic [ref=f12e73]:
+              - generic [ref=f12e74]: MSFT
+              - generic [ref=f12e75]: $419.52
+            - generic [ref=f12e77]:
+              - generic [ref=f12e78]: "-0.01"
+              - generic [ref=f12e79]: (-0.00%)
+          - generic [ref=f12e81] [cursor=pointer]:
+            - generic [ref=f12e82]:
+              - generic [ref=f12e83]: NFLX
+              - generic [ref=f12e84]: $600.03
+            - generic [ref=f12e86]:
+              - generic [ref=f12e87]: "-0.01"
+              - generic [ref=f12e88]: (-0.00%)
+          - generic [ref=f12e90] [cursor=pointer]:
+            - generic [ref=f12e91]:
+              - generic [ref=f12e92]: NVDA
+              - generic [ref=f12e93]: $833.99
+            - generic [ref=f12e95]:
+              - generic [ref=f12e96]: "+0.06"
+              - generic [ref=f12e97]: (+0.01%)
+          - generic [ref=f12e99] [cursor=pointer]:
+            - generic [ref=f12e100]:
+              - generic [ref=f12e101]: TSLA
+              - generic [ref=f12e102]: $250.06
+            - generic [ref=f12e104]:
+              - generic [ref=f12e105]: "+0.03"
+              - generic [ref=f12e106]: (+0.01%)
+          - generic [ref=f12e108] [cursor=pointer]:
+            - generic [ref=f12e109]:
+              - generic [ref=f12e110]: V
+              - generic [ref=f12e111]: $268.02
+            - generic [ref=f12e113]:
+              - generic [ref=f12e114]: "+0.00"
+              - generic [ref=f12e115]: (+0.00%)
+      - generic [ref=f12e117]:
+        - generic [ref=f12e118]:
+          - generic [ref=f12e119]: Select a ticker to view chart
+          - table [ref=f12e122]:
+            - row [ref=f12e123]:
+              - cell
+              - cell [ref=f12e124]:
+                - link "Charting by TradingView" [ref=f12e128] [cursor=pointer]:
+                  - /url: https://www.tradingview.com/?utm_medium=lwc-link&utm_campaign=lwc-chart&utm_source=localhost/static/index.html
+                  - img [ref=f12e129]
+              - cell [ref=f12e133]
+            - row [ref=f12e137]:
+              - cell
+              - cell [ref=f12e138]
+              - cell [ref=f12e142]
+        - generic [ref=f12e145]:
+          - generic [ref=f12e146]:
+            - text: Portfolio Heatmap
+            - generic [ref=f12e147]: +$38.69 total
+          - img [ref=f12e149]:
+            - generic [ref=f12e150]:
+              - generic [ref=f12e152]: AAPL
+              - generic [ref=f12e153]: 19.7%
+            - generic [ref=f12e154]:
+              - generic [ref=f12e156]: AMZN
+              - generic [ref=f12e157]: 14.7%
+        - generic [ref=f12e158]:
+          - generic [ref=f12e159]: Trade
+          - textbox "TICKER" [ref=f12e160]
+          - spinbutton "Qty" [ref=f12e161]
+          - button "Buy" [ref=f12e162]
+          - button "Sell" [ref=f12e163]
+          - generic [ref=f12e164]:
+            - text: "Cash:"
+            - generic [ref=f12e165]: $6,585.35
+        - generic [ref=f12e167]: No portfolio history yet.
+        - generic [ref=f12e168]:
+          - generic [ref=f12e169]: Positions
+          - table [ref=f12e171]:
+            - rowgroup [ref=f12e172]:
+              - row "Ticker Qty Avg Cost Current Unrealized P&L % Chg" [ref=f12e173]:
+                - columnheader "Ticker" [ref=f12e174]
+                - columnheader "Qty" [ref=f12e175]
+                - columnheader "Avg Cost" [ref=f12e176]
+                - columnheader "Current" [ref=f12e177]
+                - columnheader "Unrealized P&L" [ref=f12e178]
+                - columnheader "% Chg" [ref=f12e179]
+            - rowgroup [ref=f12e180]:
+              - row "AAPL 10 $193.50 $197.39 +$38.85 +2.01%" [ref=f12e181]:
+                - cell "AAPL" [ref=f12e182]
+                - cell "10" [ref=f12e183]
+                - cell "$193.50" [ref=f12e184]
+                - cell "$197.39" [ref=f12e185]
+                - cell "+$38.85" [ref=f12e186]
+                - cell "+2.01%" [ref=f12e187]
+              - row "AMZN 8 $184.95 $184.93 $-0.16 -0.01%" [ref=f12e188]:
+                - cell "AMZN" [ref=f12e189]
+                - cell "8" [ref=f12e190]
+                - cell "$184.95" [ref=f12e191]
+                - cell "$184.93" [ref=f12e192]
+                - cell "$-0.16" [ref=f12e193]
+                - cell "-0.01%" [ref=f12e194]
+      - generic [ref=f12e196]:
+        - button "AI Chat <" [ref=f12e197]:
+          - generic [ref=f12e198]: AI Chat
+          - generic [ref=f12e199]: <
+        - paragraph [ref=f12e202]: Hello! I'm FinAlly, your AI trading assistant. Ask me to analyze your portfolio, suggest trades, or manage your watchlist.
+        - generic [ref=f12e203]:
+          - textbox "Ask FinAlly..." [ref=f12e204]
+          - button "Send" [ref=f12e205]
+  - alert [ref=f12e206]

@@ -1,0 +1,58 @@
+- generic [active] [ref=f3e1]:
+  - generic [ref=f3e2]:
+    - banner [ref=f3e3]:
+      - generic [ref=f3e4]:
+        - generic [ref=f3e5]: FinAlly
+        - generic [ref=f3e6]: AI Trading Workstation
+      - generic [ref=f3e7]:
+        - generic [ref=f3e8]:
+          - generic [ref=f3e9]: Portfolio Value
+          - generic [ref=f3e10]: $0.00
+        - generic [ref=f3e11]:
+          - generic [ref=f3e12]: Cash Available
+          - generic [ref=f3e13]: $0.00
+        - generic [ref=f3e14]:
+          - generic "Disconnected" [ref=f3e15]
+          - generic [ref=f3e16]: Reconnecting
+    - generic [ref=f3e17]:
+      - generic [ref=f3e21]:
+        - generic [ref=f3e22]: Watchlist
+        - generic [ref=f3e23]:
+          - textbox "TICKER" [ref=f3e24]
+          - button "+" [ref=f3e25]
+      - generic [ref=f3e27]:
+        - generic [ref=f3e28]:
+          - generic [ref=f3e29]: Select a ticker to view chart
+          - table [ref=f3e32]:
+            - row [ref=f3e33]:
+              - cell
+              - cell [ref=f3e34]:
+                - link "Charting by TradingView" [ref=f3e38] [cursor=pointer]:
+                  - /url: https://www.tradingview.com/?utm_medium=lwc-link&utm_campaign=lwc-chart&utm_source=localhost/
+                  - img [ref=f3e39]
+              - cell [ref=f3e43]
+            - row [ref=f3e47]:
+              - cell
+              - cell [ref=f3e48]
+              - cell [ref=f3e52]
+        - generic [ref=f3e56]: No positions yet. Buy some shares to see your portfolio heatmap.
+        - generic [ref=f3e57]:
+          - generic [ref=f3e58]: Trade
+          - textbox "TICKER" [ref=f3e59]
+          - spinbutton "Qty" [ref=f3e60]
+          - button "Buy" [ref=f3e61]
+          - button "Sell" [ref=f3e62]
+          - generic [ref=f3e63]:
+            - text: "Cash:"
+            - generic [ref=f3e64]: $0.00
+        - generic [ref=f3e66]: No portfolio history yet.
+        - generic [ref=f3e68]: No open positions.
+      - generic [ref=f3e70]:
+        - button "AI Chat <" [ref=f3e71]:
+          - generic [ref=f3e72]: AI Chat
+          - generic [ref=f3e73]: <
+        - paragraph [ref=f3e76]: Hello! I'm FinAlly, your AI trading assistant. Ask me to analyze your portfolio, suggest trades, or manage your watchlist.
+        - generic [ref=f3e77]:
+          - textbox "Ask FinAlly..." [ref=f3e78]
+          - button "Send" [ref=f3e79]
+  - alert [ref=f3e80]

@@ -1,0 +1,58 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e4]:
+        - generic [ref=e5]: FinAlly
+        - generic [ref=e6]: AI Trading Workstation
+      - generic [ref=e7]:
+        - generic [ref=e8]:
+          - generic [ref=e9]: Portfolio Value
+          - generic [ref=e10]: $0.00
+        - generic [ref=e11]:
+          - generic [ref=e12]: Cash Available
+          - generic [ref=e13]: $0.00
+        - generic [ref=e14]:
+          - generic "Disconnected" [ref=e15]
+          - generic [ref=e16]: Reconnecting
+    - generic [ref=e17]:
+      - generic [ref=e21]:
+        - generic [ref=e22]: Watchlist
+        - generic [ref=e23]:
+          - textbox "TICKER" [ref=e24]
+          - button "+" [ref=e25]
+      - generic [ref=e27]:
+        - generic [ref=e28]:
+          - generic [ref=e29]: Select a ticker to view chart
+          - table [ref=e32]:
+            - row [ref=e33]:
+              - cell
+              - cell [ref=e34]:
+                - link "Charting by TradingView" [ref=e38] [cursor=pointer]:
+                  - /url: https://www.tradingview.com/?utm_medium=lwc-link&utm_campaign=lwc-chart&utm_source=localhost/static/index.html
+                  - img [ref=e39]
+              - cell [ref=e43]
+            - row [ref=e47]:
+              - cell
+              - cell [ref=e48]
+              - cell [ref=e52]
+        - generic [ref=e56]: No positions yet. Buy some shares to see your portfolio heatmap.
+        - generic [ref=e57]:
+          - generic [ref=e58]: Trade
+          - textbox "TICKER" [ref=e59]
+          - spinbutton "Qty" [ref=e60]
+          - button "Buy" [ref=e61]
+          - button "Sell" [ref=e62]
+          - generic [ref=e63]:
+            - text: "Cash:"
+            - generic [ref=e64]: $0.00
+        - generic [ref=e66]: No portfolio history yet.
+        - generic [ref=e68]: No open positions.
+      - generic [ref=e70]:
+        - button "AI Chat <" [ref=e71]:
+          - generic [ref=e72]: AI Chat
+          - generic [ref=e73]: <
+        - paragraph [ref=e76]: Hello! I'm FinAlly, your AI trading assistant. Ask me to analyze your portfolio, suggest trades, or manage your watchlist.
+        - generic [ref=e77]:
+          - textbox "Ask FinAlly..." [ref=e78]
+          - button "Send" [ref=e79]
+  - alert [ref=e80]

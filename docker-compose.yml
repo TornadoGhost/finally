@@ -1,0 +1,34 @@
+version: '3.9'
+services:
+  ollama:
+    image: ollama/ollama:latest
+    container_name: finally-ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama-data:/root/.ollama
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "ollama list"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  finally:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - finally-data:/app/db
+    env_file:
+      - .env
+    environment:
+      - OLLAMA_BASE_URL=http://ollama:11434
+    depends_on:
+      ollama:
+        condition: service_healthy
+    restart: unless-stopped
+
+volumes:
+  finally-data:
+  ollama-data:
