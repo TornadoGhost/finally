@@ -1,0 +1,38 @@
+version: "3.9"
+
+services:
+  # ── Main application ────────────────────────────────────────────────────
+  app:
+    build:
+      context: ..
+      dockerfile: ../Dockerfile
+    container_name: finally-app-test
+    ports:
+      - "8000:8000"
+    volumes:
+      - finally-test-data:/app/db
+    environment:
+      - FINALLY_DB_DIR=/app/db
+      - LLM_MOCK=true
+    # Let docker-compose pick up .env; override LLM_MOCK via command
+    restart: "no"
+
+  # ── Playwright test runner ───────────────────────────────────────────────
+  playwright:
+    image: mcr.microsoft.com/playwright:v1.40.0
+    container_name: finally-playwright-test
+    depends_on:
+      app:
+        condition: service_healthy
+    working_dir: /app
+    volumes:
+      - .:/app
+    # Install browsers if not already present
+    command: >
+      sh -c "npx playwright install chromium --with-deps 2>/dev/null || true
+             npx playwright test --reporter=line"
+    environment:
+      - BASE_URL=http://app:8000
+
+volumes:
+  finally-test-data:

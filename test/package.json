@@ -1,0 +1,13 @@
+{
+  "name": "finally-e2e-tests",
+  "version": "1.0.0",
+  "description": "FinAlly E2E tests via Playwright",
+  "private": true,
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.40.0"
+  }
+}
